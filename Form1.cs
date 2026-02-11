@@ -71,5 +71,30 @@ namespace DateTimePicker
             Counter++;
             label2.Text = Counter.ToString();
         }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void notifyIcon1_BalloonTipClicked(object sender, EventArgs e)
+        {
+            MessageBox.Show("You clicked me :-)");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            notifyIcon1.Icon = SystemIcons.Warning;
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Warning;
+            notifyIcon1.BalloonTipTitle = "Tittle is here";
+            notifyIcon1.BalloonTipText = "Message is here to say hi";
+            notifyIcon1.ShowBalloonTip(10000);
+        }
     }
 }

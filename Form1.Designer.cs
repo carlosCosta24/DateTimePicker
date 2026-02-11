@@ -41,6 +41,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -129,7 +131,7 @@
             // 
             this.label2.AutoEllipsis = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 273);
+            this.label2.Location = new System.Drawing.Point(32, 213);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(296, 35);
             this.label2.TabIndex = 8;
@@ -138,7 +140,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(224, 386);
+            this.button6.Location = new System.Drawing.Point(209, 275);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(118, 33);
             this.button6.TabIndex = 9;
@@ -148,7 +150,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(38, 386);
+            this.button7.Location = new System.Drawing.Point(38, 275);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(118, 33);
             this.button7.TabIndex = 10;
@@ -156,11 +158,29 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.BalloonTipClicked += new System.EventHandler(this.notifyIcon1_BalloonTipClicked);
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(103, 376);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(118, 33);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "Show notification";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label2);
@@ -174,6 +194,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -192,6 +213,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button button8;
     }
 }
 
